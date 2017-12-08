@@ -1,21 +1,15 @@
 import util.collections.RedBlackTree;
 
-import java.util.Random;
-
-public class Main {
+public abstract class Main_3 {
     public static void main(String[] args) {
-        Random r = new Random();
         RedBlackTree<Integer> tree = new RedBlackTree<>();
-//        for (int i = 0; i < 10000; i++){
-//            tree.add(
-//                    r.nextInt() % 1000
-//            );
-//        }
 
-        for (int i = 1; i < 6; i++){
+        for (int i = 1; i < 6; i++) {
+            System.out.println("Adding " + i);
             tree.add(
                     i
             );
+            tree.print();
         }
 
 //        for (int i = 0; i < 10000; i++){
@@ -23,6 +17,5 @@ public class Main {
 //                    r.nextInt() % 10000
 //            );
 //        }
-        System.out.println("The end!");
     }
 }

@@ -282,4 +282,20 @@ public class RedBlackTree<E extends Comparable<E>> {
             current.setParent(newRoot);
         }
     }
+
+    private void printElement(RedBlackTreeNode<E> current, int height){
+        if (current != null){
+            for (int i = 0; i < height; i++){
+                System.out.print("\t");
+            }
+            System.out.println(current.value());
+            height++;
+            printElement(current.left(), height);
+            printElement(current.right(), height);
+        }
+    }
+
+    public void print(){
+        printElement(root, 0);
+    }
 }
